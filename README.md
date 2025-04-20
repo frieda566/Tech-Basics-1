@@ -5,3 +5,6 @@ Welcome to my **Tech Basics repository**! Here I'll be adding **my weekly Python
 # Week 1 
 This weeks assignment consisted of creating my first **GitHub repository** with a *README.md* file. Additionally, I created a **folder structure** for my assignments. I placed my first Python excercise, which involved creating a piece of *ASCII art* inside the folder. 
 If you are interested you can find it under **assignments/ week 1**!
+
+# Week 2 
+This weeks assignment consisted of 
