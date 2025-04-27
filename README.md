@@ -8,3 +8,6 @@ If you are interested you can find it under **assignments/ week 1**!
 
 # Week 2 
 This weeks assignment consisted of creating a **text game**. I decided to create a study method quiz which helps the user find the perfect method. 
+
+# Week 3
+This weeks assignemnt consisted of creating 
