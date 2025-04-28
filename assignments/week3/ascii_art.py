@@ -1,5 +1,6 @@
 import random
 import time
+import sys
 
 print ("Welcome to the ASCII forest generator!🌲🌳")
 time.sleep(1)
@@ -9,12 +10,19 @@ tree_type = input("Enter the type of tree you want (linden tree/ spruce): ")
 while tree_type not in ['linden tree', 'spruce']:
     tree_type = input ("Invalid input. Please choose between 'linden tree' and 'spruce': ")
 
-number_of_trees = int(input("How many trees do you want in your forest? (1-10): \n "))
-if 1 < number_of_trees > 10:
-    int(input("Please enter a number between 1 and 10."))
-height = int(input("How tall should the tree(s) be? (5-20): "))
-if 5 < height > 20:
-    int(input("Please enter a number between 5 and 20."))
+while True:
+    number_of_trees = int(input("How many trees do you want in your forest? (1-10): \n "))
+    if 1 <= number_of_trees <= 10:
+        break
+    else:
+        int(input("Please enter a number between 1 and 10."))
+
+while True:
+    height = int(input("How tall should the tree(s) be? (5-20): "))
+    if 5 <= height <= 20:
+        break
+    else:
+        int(input("Please enter a number between 5 and 20."))
 
 user_leaves = input("Enter 1-5 characters to use as leaves in your forest (e.g.: * + @ # %), \n or press Enter to use random ones: ")
 if 1 <= len(user_leaves) <= 5:
@@ -25,6 +33,27 @@ else:
 time.sleep(1)
 print ("Generating your forest...\n")
 time.sleep(1)
+
+loading = [
+    "        ",
+    "🌲      ",
+    "🌳🌲    ",
+    "  🌳🌲  ",
+    "    🌳🌲",
+    "      🌳",
+    "        "
+]
+
+start_time = time.time()
+while time.time() - start_time < 7:
+    for line in loading:
+        sys.stdout.write("\r" + line)
+        sys.stdout.flush()
+        time.sleep(0.5)
+        if time.time() - start_time >= 7:
+            break
+
+print ("\n Your forest is ready! 🌳🌲\n")
 
 # List for all trees
 trees = []
@@ -74,7 +103,6 @@ for row in range(height + 3): # including trunk height
     print ()
     time.sleep(0.5)
 
-print ("Your forest is ready! 🌳🌲")
 
 
 

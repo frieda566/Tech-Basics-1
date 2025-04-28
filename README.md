@@ -10,4 +10,4 @@ If you are interested you can find it under **assignments/ week 1**!
 This weeks assignment consisted of creating a **text game**. I decided to create a study method quiz which helps the user find the perfect method. 
 
 # Week 3
-This weeks assignemnt consisted of creating 
+This weeks assignment consisted of creating a more complicated **ASCII art design** integrating new concepts and tools we learned in the past two weeks.  
