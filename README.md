@@ -11,3 +11,6 @@ This weeks assignment consisted of creating a **text game**. I decided to create
 
 # Week 3
 This weeks assignment consisted of creating a more complicated **ASCII art design** integrating new concepts and tools we learned in the past two weeks.  
+
+# Week 4
+This weeks assignment consisted of **refactoring my assignment from week 2**.  
