@@ -171,6 +171,7 @@ def questions(scores):
     study_frustration()
     reflection_style()
 
+    return scores
 
 # main
 def main():
@@ -180,8 +181,7 @@ def main():
     name = input("\nEnter your name: ")
     time.sleep(1)
 
-    typing(
-        f"Hello {name}, based on questions about your preferred learning style this program will provide you with the best study method for you!")
+    typing(f"Hello {name}, based on questions about your preferred learning style this program will provide you with the best study method for you!")
     typing("\nLet's start.🚀\n")
     time.sleep(1)
 
