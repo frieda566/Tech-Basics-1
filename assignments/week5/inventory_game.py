@@ -158,7 +158,7 @@ def examine(item_name):
         print("You don't see that item here or in your inventory.")
 
 def change_room(destination):
-    global current_room, energy, ate_apple
+    global current_room, energy, ate_apple, solved_riddle
 
     if destination not in rooms:
         print("That place doesn't exist.")
@@ -171,21 +171,22 @@ def change_room(destination):
             print("You can't go there yet.")
         return
 
-    # If the player is at the cliff, they must eat the apple to proceed
-    if destination == "cliff":
-        print("\nYou move to the cliff.")
-        print(rooms[destination]["description"])
-        print("The climb has drained your energy.")
-        print("Your energy is too low to move forward. Perhaps you should eat something to regain strength.")
-        return
-
     # After the player eats the apple, they can go to the raft
-    if destination == "raft" and not ate_apple:
-        print("Your energy is too low to board the raft. You need to eat the apple first to regain strength.")
-        return
-    elif destination == "raft" and ate_apple:
+    if destination == "cliff":
+        print("You move to the cliff.")
+        print(rooms[destination]["description"])
+        if energy <= 50:  # Energy check for proceeding
+            print("\nYour energy is too low to continue. You need to eat something to regain strength.")
+            return
+
+    elif destination == "raft":
+        if not ate_apple:
+            print("You need to eat the apple first to regain energy before boarding the raft.")
+            return
+        print("Perfect! Now that your energy is restored, you can board the raft.")
         print("You move to the raft.")
         print(rooms[destination]["description"])
+
         # Add the riddle interaction once the player is ready
         if not solved_riddle:
             solve_raft_riddle()
@@ -272,3 +273,4 @@ def game_loop():
 
 if __name__ == "__main__":
     game_loop()
+
