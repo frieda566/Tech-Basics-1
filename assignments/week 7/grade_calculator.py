@@ -116,7 +116,7 @@ if __name__ == "__main__":
 
     newname = filename.split(".")[0] + "_calculated_by_" + user_name + ".csv"
     write_csv(newname)
-    print("New file written:", newname)
+    print("🎉New file written:", newname)
 
     print_analysis()
 
