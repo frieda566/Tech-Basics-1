@@ -17,3 +17,6 @@ This weeks assignment consisted of **refactoring my assignment from week 2**.
 
 # Week 5 
 This weeks assignment consisted of creating an **inventory game**. 
+
+# Week 7
+This weeks assignment consisted of creating a **grade calculator**.
