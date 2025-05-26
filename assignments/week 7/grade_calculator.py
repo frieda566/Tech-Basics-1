@@ -23,7 +23,10 @@ def read_csv(filename):
 def populate_scores():
     for student in students:
         for week in weeks:
-            if week not in student or student[week].strip() == ' ' or student[week].strip() == '-':
+            current_value = student.get(week, '').strip()
+            if current_value == '' or current_value == '-':
+                student[week] = str(random.randint(0, 3))
+            elif not current_value.isdigit():
                 student[week] = str(random.randint(0, 3))
     pass
 
