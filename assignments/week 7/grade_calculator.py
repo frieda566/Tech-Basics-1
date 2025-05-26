@@ -2,7 +2,6 @@ from sys import argv
 import csv
 import random
 
-filename = "Technical Basics I_2025 - Sheet1.csv"
 students = []
 weeks = [f"week{i}" for i in range(1, 14) if i != 6]
 
@@ -10,12 +9,12 @@ weeks = [f"week{i}" for i in range(1, 14) if i != 6]
 def read_csv(filename):
     global students
     try:
-        with open(filename, newline='') as csvfile:
+        with open(filename, newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
             students = list(reader)
             print("✅ File loaded successfully.")
     except FileNotFoundError:
-        print("❌ Error: File '{filename}' not found.")
+        print(f"❌ Error: File '{filename}' not found.")
         exit()
     pass
 
@@ -107,7 +106,11 @@ def print_analysis():
     pass
 
 if __name__ == "__main__":
+    if len(argv) < 2:
+        print("❌ Usage: grade_calculator.py <filename.csv>")
+        exit()
 
+    filename = argv[1]
     print("Open file:", filename)
 
     read_csv(filename)
@@ -115,9 +118,9 @@ if __name__ == "__main__":
     populate_scores()
     calculate_all()
 
-    user_name = "[Frieda]"
+    user_name = "frieda"
 
-    newname = filename.split(".")[0] + "_calculated_by_" + user_name + ".csv"
+    newname = filename.split(".", 1)[0] + "_calculated_by_" + user_name + ".csv"
     write_csv(newname)
     print("🎉New file written:", newname)
 
