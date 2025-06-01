@@ -20,3 +20,6 @@ This weeks assignment consisted of creating an **inventory game**.
 
 # Week 7
 This weeks assignment consisted of creating a **grade calculator**.
+
+# Week 8 
+This weeks assignment consisted of creating a **Pygame Animation**.
