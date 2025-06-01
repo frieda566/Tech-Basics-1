@@ -46,7 +46,7 @@ class Fish:
         self.image.blit(tint_surface, (0, 0), special_flags=pygame.BLEND_RGBA_ADD)
 
         # Circle movement setup
-        self.angle = random.uniform(0, math.pi * 2) #random angle in full circle
+        self.angle = random.uniform(0, math.pi * 2) # Random angle in full circle
         self.radius = random.randint(30, 100)
         self.center_x = self.x
         self.center_y = self.y
@@ -55,7 +55,7 @@ class Fish:
         if self.pattern == 'linear':
             self.x += self.speed_x
             self.y += self.speed_y
-        elif self.pattern == 'sine': #"wave" like motion
+        elif self.pattern == 'sine': # "Wave" like motion
             self.x += self.speed_x
             self.y = self.center_y + math.sin(self.x * 0.05) * 30
         elif self.pattern == 'circle':
@@ -76,7 +76,7 @@ class Fish:
 # Create multiple fish
 fishes = [Fish() for _ in range(NUM_FISH)]
 
-# Main loop
+# Main
 running = True
 while running:
     clock.tick(60)
