@@ -23,3 +23,6 @@ This weeks assignment consisted of creating a **grade calculator**.
 
 # Week 8 
 This weeks assignment consisted of creating a **Pygame Animation**.
+
+# Week 9 
+This weeks assignment consisted of creating an **interactive game**. 
