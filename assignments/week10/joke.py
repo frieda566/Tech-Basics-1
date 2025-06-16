@@ -1,15 +1,18 @@
 import cowsay
 import pyjokes
+from art import tprint
+from myjokes import get_funny_joke
+from colorama import init, Fore
 
-print(pyjokes.get_joke())
-cowsay.cow('Hello World')
+# initialize colorama
+init(autoreset=True)
+
+# title
+tprint("Joke Time!", font="slant")
+
 
 joke = pyjokes.get_joke()
 cowsay.cow(joke)
-
-#using the module and colorama
-from myjokes import get_funny_joke
-from colorama import init, Fore
 
 init()
 

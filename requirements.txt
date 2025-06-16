@@ -1,0 +1,4 @@
+art==6.5
+colorama==0.4.6
+cowsay==6.1
+pyjokes==0.8.3
